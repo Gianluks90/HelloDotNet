@@ -8,11 +8,11 @@ namespace HelloDotNet
         {
             Console.WriteLine("Hello World!");
             // Iterations();
-            //Recursion(1);
-            //  FibonacciIterative();
+            // Recursion(1);
+            // FibonacciIterative();
             // FibonacciRecursion();
-            Arrays();
-       
+            // Arrays();
+            FizzBuzz();
         }
 
         
@@ -164,6 +164,26 @@ namespace HelloDotNet
                 return BinarySearch(array, a, start, pos-1);
             }
         }
+        static void FizzBuzz() 
+        {
+            string message;
+            for (int i=1; i<=100; ++i)
+            {
+                message = "";
+                if (i % 3 == 0)
+                {
+                    message += "Fizz";
+                }
+                if (i % 5 == 0)
+                {
+                    message += "Buzz";
+                }
+                if (String.IsNullOrEmpty(message))
+                {
+                    message = i.ToString();
+                }
+                Console.WriteLine(message);
+            }
+        }
     }
-
 }
